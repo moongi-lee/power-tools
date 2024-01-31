@@ -28,11 +28,9 @@ export default function RootLayout({ children,}: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={`${notoSans.variable} ${notoSansKr.variable}`}>
-        <div className="layout__box">
           <Header />
-          <div className="contents">{children}</div>
+          {children}
           <Footer />
-        </div>
       </body>
     </html>
   );
