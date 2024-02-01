@@ -1,4 +1,12 @@
+"use client"
+import Link from "next/link";
+import {useState} from "react";
+import ToolCard from "@/components/ToolCard";
+
 export default function Home() {
+
+  const [hoverState, setHoverState] = useState();
+
   return (
     <>
       <div className="contents__box">
@@ -6,7 +14,7 @@ export default function Home() {
           <div className="main_section__intro">
             <div className="main_section__intro-title">
               CREATE STUNNING VISUALS <br />
-              IN SECONDS{" "}
+              IN SECONDS
             </div>
             <img
               className="main_section__intro-image"
@@ -17,21 +25,7 @@ export default function Home() {
           <div className="main_section__tools">
             <div className="main_section__tools-title">TOOLS</div>
             <div className="main_section__tools-grid">
-              <div className="main_section__tools-grid-item">
-                <img
-                    className="main_section__tools-grid-item-image"
-                    src="/image/item-image.png"
-                    alt="아이탬 이미지"
-                />
-                <div className="main_section__tools-grid-item-textbox">
-                  <div className="main_section__tools-grid-item-title">
-                    Remove Background
-                  </div>
-                  <div className="main_section__tools-grid-item-description">
-                    Extract the main subject from a pucture with incredible accuracy. it's like magic
-                  </div>
-                </div>
-              </div>
+              <ToolCard />
               <div className="main_section__tools-grid-item">
                 <img
                     className="main_section__tools-grid-item-image"

@@ -146,12 +146,35 @@ html {
 .main_section__tools-grid-item {
   border-radius: 20px;
   background-color: var(--color-background-contents);
-  margin: 10px 10px 0 0;
+  margin: 15px 15px 0 0;
+  overflow: hidden;
+  transition: all 0.1s;
+  border: 1px solid var(--color-background-sub);
+}
+
+.image__frame {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .main_section__tools-grid-item-image {
   border-radius: 20px;
   width: 100%;
+  transition: all 0.3s ease;
+}
+
+.main_section__tools-grid-item:hover .main_section__tools-grid-item-image {
+  transform: scale(1.1);
+}
+
+.main_section__tools-grid-item:hover {
+  border: 1px solid rgba(29, 57, 202, 0.9);
+  box-shadow: 0 0 10px rgba(29, 57, 202, 0.9);
+}
+
+.main_section__tools-grid-item:hover .main_section__tools-grid-item-textbox div {
+  color: rgba(29, 57, 202, 0.9);
 }
 
 .main_section__tools-grid-item-textbox {
