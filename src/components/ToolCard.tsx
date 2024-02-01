@@ -1,22 +1,30 @@
 import Link from "next/link";
 
-export default function ToolCard() {
+type ToolCardProps = {
+  image_src: string;
+  title: string;
+  description: string;
+  url: string;
+};
+
+
+export default function ToolCard( { image_src, title, description, url }: ToolCardProps) {
   return (
     <>
-      <Link href="/pages/tools/remove-bg">
+      <Link href={url}>
         <div className="main_section__tools-grid-item">
-          <img
-            className="main_section__tools-grid-item-image"
-            src="/image/item-image.png"
-            alt="아이탬 이미지"
-          />
+          <div className="main_section__tools-grid-item-image">
+            <img
+              src={image_src}
+              alt="아이탬 이미지"
+            />
+          </div>
           <div className="main_section__tools-grid-item-textbox">
             <div className="main_section__tools-grid-item-title">
-              Remove Background
+              {title}
             </div>
             <div className="main_section__tools-grid-item-description">
-              Extract the main subject from a pucture with incredible accuracy.
-               it&apos;s  like magic
+              {description}
             </div>
           </div>
         </div>
