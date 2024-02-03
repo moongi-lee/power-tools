@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+	    .file-upload {
+	        overflow: hidden;
+	        display: inline-block;
+	        position: relative;
+	        text-align: center;
+	        vertical-align: middle;
+	    }
+
+	    .file-upload input[type="file"] {
+	        position: absolute;
+	        top: 0;
+	        right: 0;
+	        min-width: 100%;
+	        min-height: 100%;
+	        font-size: 100px;
+	        text-align: right;
+	        filter: alpha(opacity=0);
+	        opacity: 0;
+	        outline: none;
+	        background: white;
+	        cursor: inherit;
+	        display: block;
+	    }
+
+	    .file-upload .file-select-button {
+	        border: 1px solid #ccc;
+	        display: inline-block;
+	        padding: 5px 10px;
+	        cursor: pointer;
+	    }
+
+	    .file-upload .file-select-name {
+	        margin-left: 8px;
+	        display: inline-block;
+	    }
+	</style>
+</head>
+<body>
+
+<div class="file-upload">
+    <div class="file-select-button" id="fileName">파일 선택</div>
+    <div class="file-select-name" id="noFile">선택된 파일 없음...</div>
+    <input type="file" name="chooseFile" id="chooseFile">
+</div>
+
+<script>
+    document.getElementById('chooseFile').addEventListener('change', function(e) {
+        var fileName = this.value.split('\\').pop();
+        document.getElementById('fileName').textContent = "파일 선택됨";
+        document.getElementById('noFile').textContent = fileName ? fileName : "선택된 파일 없음...";
+    });
+</script>
+
+</body>
+</html>

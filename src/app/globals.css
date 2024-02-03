@@ -1,4 +1,5 @@
 /*  Global  */
+@import "loading.css";
 
 /*  Google font  */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -16,7 +17,23 @@
 
   /*  Font  */
   --font-size: 16px;
+
 }
+
+.title {
+  font-size: 50px;
+  font-weight: 700;
+  /*line-height: 1;*/
+}
+
+.description {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--color-text-sub);
+}
+
+
 
 /*  css initialize  */
 * {
@@ -209,4 +226,148 @@ html {
   font-weight: 500;
   line-height: 1.3;
   color: var(--color-text-sub);
+}
+
+
+/*  remove bg page  */
+.remove-bg {
+  max-width: 1080px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+
+.remove-bg__main-form__intro h1 {
+  margin-bottom: 15px;
+}
+
+.remove-bg-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.remove-bg__main-form__data-upload {
+  width: 100%;
+  margin: 50px 0 30px 0;
+  height: 300px;
+  border: 2px dashed white;
+  border-radius: 20px;
+  background-color: var(--color-button);
+  font-weight: 500;
+  line-height: 280px;
+  transition: all 0.3s ease;
+}
+
+.remove-bg__main-form__data-upload:hover {
+  background-color: var(--color-button-hover);
+  cursor: pointer;
+}
+
+.remove-bg__main-form__data-upload::placeholder  {
+  color: white;
+  font-weight: 500;
+  font-size: 17px;
+  text-align: center;
+}
+
+.prompt {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 20px;
+  color: black;
+  margin-top: 10px;
+}
+
+.remove-bg__main-form__data button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: white;
+  background-color: var(--color-button);
+  border: none;
+}
+
+.remove-bg__main-form__data button:hover {
+  background-color: var(--color-button-hover);
+  cursor: pointer;
+}
+
+.remove-bg__example {
+  margin-top: 150px;
+}
+
+.remove-bg__example__btnbox {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.remove-bg__example__btnbox button {
+  padding: 7px 15px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: white;
+  background-color: var(--color-background);
+  border: 1px solid white;
+}
+
+.remove-bg__example__btnbox button:hover {
+  background-color: #4c4c4c;
+  cursor: pointer;
+}
+
+.remove-bg__example__image {
+  width: 100%;
+  height: 600px;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.remove-bg__example__image img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.remove-bg__example__image p {
+  width: 80%;
+  margin: 25px auto;
+}
+
+
+/*  Not Complite page  */
+.not-complete {
+  max-width: 1080px;
+  margin: 300px auto;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+/*  Test Page  */
+.test__box {
+  max-width: 1080px;
+  margin: 100px auto;
+  text-align: center;
+  height: 100vh;
+
+}
+
+.test__title {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+}
+
+.test__logo {
+  font-size: 60px;
+  padding: 0;
+  height: 70px;
+  margin-top: 500px;
 }
